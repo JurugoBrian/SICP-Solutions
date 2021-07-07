@@ -1,0 +1,6 @@
+#lang racket
+
+; Adding Ratinal Numbers
+
+(define (add-rat x y)
+  (make-rat (+ (* (numer x)(denom y))(* (numer y) (denom x)))))
