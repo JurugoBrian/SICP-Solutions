@@ -18,3 +18,12 @@ one-2-four
       (list-ref (cdr items) (- n 1))))
 (define squares (list 1 4 9 16 25))
 (list-ref squares 3)
+
+; Primitive null? to test for empty list & length to return
+; the length of a list
+(define (length items)
+  (if (null? items)
+      0
+      (+ 1 (length (cdr items)))))
+(define odds (list 1 3 5 7 9 11 13 15))
+(length odds)
