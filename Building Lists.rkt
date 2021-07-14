@@ -19,11 +19,22 @@ one-2-four
 (define squares (list 1 4 9 16 25))
 (list-ref squares 3)
 
-; Primitive null? to test for empty list & length to return
-; the length of a list
+; Get the length of  a list
 (define (length items)
   (if (null? items)
       0
       (+ 1 (length (cdr items)))))
 (define odds (list 1 3 5 7 9 11 13 15))
 (length odds)
+
+; Count the leaves/number of elements in a tree list
+(define (count-leaves x)
+  (cond ((null? x) 0)
+        ((not (pair? x)) 1)
+        (else (+ (count-leaves (car x))
+                 (count-leaves (cdr x))))))
+
+; Hierarchical Structures
+(define x (cons (list 1 2) (list 3 4)))
+(length x)
+(count-leaves x)
