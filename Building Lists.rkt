@@ -38,3 +38,10 @@ one-2-four
 (define x (cons (list 1 2) (list 3 4)))
 (length x)
 (count-leaves x)
+
+(list x x)
+(((1 2) 3 4) ((1 2) 3 4))
+
+(length (list x x))
+(count-leaves (list x x))
+
