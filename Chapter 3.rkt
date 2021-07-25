@@ -51,3 +51,12 @@
           (else (error "Unknown request -- MAKE-ACCOUNT" m))))
   dispatch)
 
+
+(define acc (make-account 100))
+((acc 'withdraw) 50)
+((acc 'withdraw) 60)
+((acc 'deposite) 40)
+((acc 'withdraw) 60)
+
+(define acc2 (make-account 500))
+((acc2 'withdraw) 100)
